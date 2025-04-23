@@ -3,7 +3,7 @@ public class ReviewAnalysis {
     private Review[] allReviews;
 
     public ReviewAnalysis() {
-      
+    
     }
 
     public ReviewAnalysis(Review[] reviews) {
@@ -23,11 +23,11 @@ public class ReviewAnalysis {
         for (int i = 0; i < allReviews.length; i++) {
         String s = i + "-" + allReviews[i].getComment();
         String last = s.substring(s.length() - 1);
-        if (!last.equals(".") && !last.equals("!")) {
-            s += ".";
-            if (s.indexOf("!") > 0) comments.add(s);
+        if (!(last.equals(".") || last.equals("!"))) s+= ".";
+         if (s.indexOf("!") > 0) comments.add(s);
         }
-        }
+      
+      
         return comments;
     }
 }
