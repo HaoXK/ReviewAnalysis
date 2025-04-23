@@ -3,7 +3,7 @@ public class ReviewAnalysis {
     private Review[] allReviews;
 
     public ReviewAnalysis() {
-    
+    allReviews = null;
     }
 
     public ReviewAnalysis(Review[] reviews) {
